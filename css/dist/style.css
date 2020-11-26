@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../css/fonts/OpenSans-Light.ttf") format("sans-serif");
+}
+@font-face {
+  font-family: "pt-sans";
+  font-weight: 400;
+  src: url("../css/fonts/pt-sans.ttf") format("sans-serif");
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+header {
+  background-image: url(../images/header.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  padding-top: 50px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: pt-sans, sans-serif;
+}
+header .container {
+  padding-top: 38px;
+}
+header .container .head {
+  justify-content: space-evenly;
+}
+header .container nav {
+  padding-top: 13px;
+}
+header .container .sub-menu {
+  display: none;
+  position: absolute;
+}
+header .container .main-item:focus ~ .sub-menu,
+header .container .main-item:active ~ .sub-menu,
+header .container .sub-menu:hover {
+  display: block;
+}
+header .container nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header .container .LB {
+  padding-top: 13px;
+}
+header .container .WY {
+  padding-top: 80px;
+}
+header .container h1 {
+  font-size: 48px;
+  font-family: "OpenSans-Light", sans-serif;
+}
+header .container a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+header .container nav a:hover {
+  color: #FFFF00;
+}
+header .container nav a:active {
+  color: #FF0000;
+}
+header .container div {
+  text-align: center;
+}
+header .container .col-8 {
+  padding: 84px 0 99px 0;
+  font-size: 18px;
+}
+
+main {
+  padding-top: 50px;
+  width: 100%;
+  height: 100%;
+  font-family: pt-sans, sans-serif;
+  font-weight: 400;
+}
+main .container div {
+  text-align: center;
+}
+main .container p {
+  text-align: left;
+  padding-left: 10px;
+  font-size: 14px;
+}
+main .container h5 {
+  font-weight: 700;
+  font-size: 18px;
+}
+main .container .LM {
+  text-align: center;
+  color: #1657AB;
+}
+main .container .cards {
+  justify-content: center;
+  margin-top: 50px;
+}
+main .container .card {
+  background-color: #FAFAFA;
+  display: block;
+  width: 340px;
+  height: 320px;
+  margin: 10px;
+}
+main .container .card img {
+  margin-top: 40px;
+}
+main .container .card h5 {
+  margin-top: 40px;
+}
+main .container .card:hover {
+  box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5);
+  cursor: pointer;
+}
+main .container .main-text {
+  margin-bottom: 60px;
+  font-size: 16px;
+}
+main .container button {
+  border-radius: 5px;
+  background: white;
+  border: 1px solid #85B657;
+  padding: 14px 31px;
+  cursor: pointer;
+  font-size: 14px;
+}
+main .container button:active,
+main .container button:focus {
+  outline: none;
+}
+main .container .col-12 {
+  margin-top: 80px;
+}
+main .container .col-12 img {
+  margin: 25px;
+}
+main .container .col-12 p {
+  font-size: 16px;
+}
+
+footer {
+  background: #19263F;
+  height: 238px;
+  color: white;
+  margin-top: 100px;
+  font-family: pt-sans, sans-serif;
+  font-weight: 400;
+}
+footer .row {
+  justify-content: center;
+}
+footer .row p {
+  margin: 25px;
+}
+footer .footimg {
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.3);
+  padding-top: 9px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 24px;
+}
+footer .copy {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media (max-width: 799px) {
+  .sub-menu {
+    left: auto;
+  }
+
+  .head {
+    display: block;
+  }
+
+  footer {
+    height: auto;
+  }
+}
+@media (max-width: 599px) {
+  main .container .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .container .col-4 {
+    max-width: 100%;
+  }
+  main .container .p {
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  header .container nav {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  header .container nav .sub-menu {
+    left: 18px;
+    top: 321px;
+  }
+  header .container .navli {
+    display: flex;
+    flex-direction: column;
+  }
+  header .container .LB {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 73px;
+  }
+  header .container .head {
+    display: flex;
+  }
+
+  main .container .card {
+    height: auto;
+    width: auto;
+  }
+}
